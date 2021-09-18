@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>PCDT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<div class="clearfix"></div>
+
+<div class="wrapper">
+	<div class="steps-area steps-area-fixed">
+		<div class="image-holder">
+			<img src="assets/img/pcdt.png" alt="">
+		</div>
+		<div class="steps clearfix" hidden>
+			<ul class="tablist multisteps-form__progress">
+				<li class="multisteps-form__progress-btn js-active current">
+					<span>1</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<form class="multisteps-form__form" action="#" id="wizard" method="POST">
+		<div class="form-area position-relative">
+			<!-- div 1 -->
+			<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+				<div class="wizard-forms">
+					<div class="inner pb-100 clearfix">
+						<div class="form-content pera-content">
+							<div class="step-inner-content">
+								<h2>Tratamento de herpes genital</h2>
+								<p>Dentre as opções abaixo, selecione a que mais se adequa ao quadro clínico do paciente. Após selecionada uma opção, será exibido o tratamento para o quadro.</p>
+								<div class="services-select-option">
+									<ul id="teste_1">
+										<li class="bg-white" id="PrimeiroEpisodio"><label>Primeiro episódio<input type="radio"></label></li>
+										<li class="bg-white" id="Recidiva"><label>Recidiva <input type="radio"></label></li>
+										<li class="bg-white" id="Supressao"><label>Supressão de herpes genital (6 ou mais episódios/ano) <input type="radio"></label></li>
+										<li class="bg-white" id="Herpes"><label>Herpes genital em imunossuprimidos <input type="radio"></label></li>
+										<li class="bg-white" id="Gestante"><label>Gestante <input type="radio"></label></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="modal fade PrimeiroEpisodio" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6>Primeiro episódio</h6>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h6 class="mb-3">TRATAMENTO</h6>
+					<p>Aciclovir 200mg, 2 comprimidos, VO, 3x/dia, por 7-10 dias.</p>
+					<p class="mt-2 mb-2"><strong>OU</strong></p>
+					<p>Aciclovir 200 mg, 1 comprimido, VO, 5x/dia (7h, 11h, 15h, 19h, 23h, 7h...), por 7-10 dias</p>
+					<hr>
+					<h6 class="mb-3">COMENTÁRIOS</h6>
+					<p>Iniciar o tratamento o mais precocemente possível.</p>
+					<p class="mt-2">O tratamento pode ser prolongado se a cicatrização estiver incompleta após 10 dias de terapia.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade Recidiva" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6>Recidiva</h6>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h6 class="mb-3">TRATAMENTO</h6>
+					<p>Aciclovir 200mg, 2 comprimidos, VO, 3x/dia, por 5 dias.</p>
+					<p class="mt-2 mb-2"><strong>OU</strong></p>
+					<p>Aciclovir 200mg, 4 comprimidos, VO, 2x/dia, por 5 dias</p>
+					<hr>
+					<h6 class="mb-3">COMENTÁRIOS</h6>
+					<p>O tratamento deve ser iniciado preferencialmente no período prodrômico (aumento de sensibilidade local, ardor, dor, prurido e hiperemia da região genital).</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade Supressao" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6>Supressão de herpes genital (6 ou mais episódios/ano)</h6>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h6 class="mb-3">TRATAMENTO</h6>
+					<p>Aciclovir 200mg, 2 comprimidos, VO, 2x/dia, por até seis meses, podendo o tratamento ser prolongado por até 2 anos.</p>
+					<hr>
+					<h6 class="mb-3">COMENTÁRIOS</h6>
+					<p>Consideram-se elegíveis para o tratamento supressivo pacientes com episódios repetidos de herpes genital (mais de 6 ao ano).</p>
+					<p>Indicada avaliação periódica de função renal e hepática.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade Herpes" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6>Herpes genital em imunossuprimidos</h6>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h6 class="mb-3">TRATAMENTO</h6>
+					<p>Aciclovir endovenoso, 5-10 mg/ kg de peso, EV, de 8/8h, por 5 a 7 dias, ou até resolução clínica</p>
+					<hr>
+					<h6 class="mb-3">COMENTÁRIOS</h6>
+					<p>Em caso de lesões extensas em pacientes com imunossupressão (usuários crônicos de corticoide, pacientes em uso de imunomoduladores, transplantados de órgãos sólidos e PVHIV), pode-se optar pelo tratamento endovenoso.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade Gestante" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6>Gestante</h6>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h6 class="mb-3">TRATAMENTO</h6>
+					<p>Aciclovir 200mg, 2 comprimidos, VO, 3x/dia, por 7-10 dias.</p>
+					<p class="mt-2 mb-2"><strong>OU</strong></p>
+					<p>Aciclovir 200 mg, 1 comprimido, VO, 5x/dia (7h, 11h, 15h, 19h, 23h, 7h...), por 7-10 dias</p>
+					<hr>
+					<h6 class="mb-3">COMENTÁRIOS</h6>
+					<p>Tratar o primeiro episódio em qualquer trimestre da gestação.</p>
+					<p class="mt-2">Se a primoinfecção ocorreu na gestação ou se recidivas foram frequentes no período gestacional, pode-se realizar terapia supressiva, a partir da 36a semana, com aciclovir 400mg, 3x/dia.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+	$(document).ready(function() {
+		let teste_1 = document.getElementById('teste_1');
+
+		teste_1.addEventListener('click', function(e) {
+			console.log( e.target.id);
+			$(`.${e.target.id}`).modal('show');
+		});
+
+	});
+</script>
+</body>
+
+</html>
